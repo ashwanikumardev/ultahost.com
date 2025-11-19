@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UltaHost - Premium Hosting & Domain Services | Fast, Reliable, Secure</title>
-    <meta name="description" content="Get premium hosting and domain services with UltaHost. Fast servers, 24/7 support, and seamless integration. Book a demo today!">
+    <meta name="description"
+        content="Get premium hosting and domain services with UltaHost. Fast servers, 24/7 support, and seamless integration. Book a demo today!">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
@@ -29,7 +32,8 @@
     <section class="hero">
         <div class="hero-content">
             <h1>Power Your Digital Presence</h1>
-            <p>Premium hosting and domain services that scale with your ambitions. Lightning-fast servers, 24/7 support, and seamless management.</p>
+            <p>Premium hosting and domain services that scale with your ambitions. Lightning-fast servers, 24/7 support,
+                and seamless management.</p>
             <div class="hero-cta">
                 <a href="#booking" class="btn btn-primary">Book a Demo</a>
                 <a href="#features" class="btn btn-secondary">Explore Features</a>
@@ -146,31 +150,109 @@
         <div class="booking-section">
             <h2>Schedule Your Free Consultation</h2>
             <p>Talk to our experts and discover how UltaHost can transform your digital infrastructure</p>
-            <div class="calendar-container">
-                <iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0UltaHostDemo?gv=true" 
-                        style="border: 0; width: 100%; height: 600px;" 
-                        frameborder="0" 
-                        scrolling="no"
-                        onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                </iframe>
-                <div style="display: none; padding: 3rem; text-align: center;">
-                    <h3>📅 Book Your Demo</h3>
-                    <p style="color: #6b7280; margin: 1rem 0;">Select a convenient time to meet with our team</p>
-                    <button class="btn btn-primary" onclick="alert('Calendar booking integration - Connect your Google Calendar here')">Choose a Time Slot</button>
+            <div class="booking-interface">
+                <div class="booking-grid">
+                    <div class="booking-info">
+                        <h3>📅 30-Minute Demo Call</h3>
+                        <div class="info-item">
+                            <span class="info-icon">⏱️</span>
+                            <div>
+                                <strong>Duration</strong>
+                                <p>30 minutes</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-icon">💬</span>
+                            <div>
+                                <strong>Platform</strong>
+                                <p>Google Meet / Slack Call</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-icon">✨</span>
+                            <div>
+                                <strong>What to Expect</strong>
+                                <p>• Personalized hosting recommendations<br>
+                                    • Live dashboard walkthrough<br>
+                                    • Migration assistance planning<br>
+                                    • Q&A with our experts</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="booking-calendar">
+                        <h3>Select a Date & Time</h3>
+                        <div class="time-slots">
+                            <div class="time-slot" onclick="selectTimeSlot(this, 'Monday, Nov 25 - 10:00 AM')">
+                                <div class="slot-date">Mon, Nov 25</div>
+                                <div class="slot-time">10:00 AM</div>
+                            </div>
+                            <div class="time-slot" onclick="selectTimeSlot(this, 'Monday, Nov 25 - 2:00 PM')">
+                                <div class="slot-date">Mon, Nov 25</div>
+                                <div class="slot-time">2:00 PM</div>
+                            </div>
+                            <div class="time-slot" onclick="selectTimeSlot(this, 'Tuesday, Nov 26 - 11:00 AM')">
+                                <div class="slot-date">Tue, Nov 26</div>
+                                <div class="slot-time">11:00 AM</div>
+                            </div>
+                            <div class="time-slot" onclick="selectTimeSlot(this, 'Tuesday, Nov 26 - 3:00 PM')">
+                                <div class="slot-date">Tue, Nov 26</div>
+                                <div class="slot-time">3:00 PM</div>
+                            </div>
+                            <div class="time-slot" onclick="selectTimeSlot(this, 'Wednesday, Nov 27 - 9:00 AM')">
+                                <div class="slot-date">Wed, Nov 27</div>
+                                <div class="slot-time">9:00 AM</div>
+                            </div>
+                            <div class="time-slot" onclick="selectTimeSlot(this, 'Wednesday, Nov 27 - 1:00 PM')">
+                                <div class="slot-date">Wed, Nov 27</div>
+                                <div class="slot-time">1:00 PM</div>
+                            </div>
+                            <div class="time-slot" onclick="selectTimeSlot(this, 'Thursday, Nov 28 - 10:00 AM')">
+                                <div class="slot-date">Thu, Nov 28</div>
+                                <div class="slot-time">10:00 AM</div>
+                            </div>
+                            <div class="time-slot" onclick="selectTimeSlot(this, 'Thursday, Nov 28 - 4:00 PM')">
+                                <div class="slot-date">Thu, Nov 28</div>
+                                <div class="slot-time">4:00 PM</div>
+                            </div>
+                            <div class="time-slot" onclick="selectTimeSlot(this, 'Friday, Nov 29 - 11:00 AM')">
+                                <div class="slot-date">Fri, Nov 29</div>
+                                <div class="slot-time">11:00 AM</div>
+                            </div>
+                            <div class="time-slot" onclick="selectTimeSlot(this, 'Friday, Nov 29 - 2:00 PM')">
+                                <div class="slot-date">Fri, Nov 29</div>
+                                <div class="slot-time">2:00 PM</div>
+                            </div>
+                        </div>
+                        <div class="booking-form" id="bookingForm" style="display: none;">
+                            <h4>Confirm Your Booking</h4>
+                            <p class="selected-time" id="selectedTime"></p>
+                            <input type="text" placeholder="Your Name" class="booking-input" required>
+                            <input type="email" placeholder="Your Email" class="booking-input" required>
+                            <input type="tel" placeholder="Phone Number (optional)" class="booking-input">
+                            <textarea placeholder="Any specific topics you'd like to discuss?" class="booking-input"
+                                rows="3"></textarea>
+                            <button class="btn btn-primary" style="width: 100%;" onclick="confirmBooking()">Confirm
+                                Booking</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- CTA Section -->
-    <section style="text-align: center; padding: 6rem 2rem; background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #ec4899 100%);">
+    <section
+        style="text-align: center; padding: 6rem 2rem; background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #ec4899 100%);">
         <h2 style="font-size: 3rem; margin-bottom: 1rem;">Ready to Get Started?</h2>
-        <p style="font-size: 1.25rem; margin-bottom: 2rem; opacity: 0.9;">Join thousands of businesses already powered by UltaHost</p>
+        <p style="font-size: 1.25rem; margin-bottom: 2rem; opacity: 0.9;">Join thousands of businesses already powered
+            by UltaHost</p>
         <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-            <button class="btn btn-secondary" id="slackSignupBtn" style="background: white; color: #6366f1; border: none;">
+            <button class="btn btn-secondary" id="slackSignupBtn"
+                style="background: white; color: #6366f1; border: none;">
                 <span style="font-size: 1.5rem; vertical-align: middle;">💬</span> Sign Up with Slack
             </button>
-            <a href="#booking" class="btn btn-primary" style="background: rgba(255,255,255,0.2); border: 2px solid white;">Book a Demo</a>
+            <a href="#booking" class="btn btn-primary"
+                style="background: rgba(255,255,255,0.2); border: 2px solid white;">Book a Demo</a>
         </div>
     </section>
 
@@ -219,7 +301,8 @@
         <div class="modal-content">
             <button class="modal-close" onclick="closeModal()">&times;</button>
             <h2 style="margin-bottom: 1rem;">Connect with Slack</h2>
-            <p style="color: var(--text-secondary); margin-bottom: 2rem;">Sign in to access your dashboard and join our community workspace</p>
+            <p style="color: var(--text-secondary); margin-bottom: 2rem;">Sign in to access your dashboard and join our
+                community workspace</p>
             <button class="btn btn-primary" style="width: 100%; margin-bottom: 1rem;" onclick="handleSlackAuth()">
                 <span style="font-size: 1.5rem; vertical-align: middle;">💬</span> Continue with Slack
             </button>
@@ -231,4 +314,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>

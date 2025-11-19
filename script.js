@@ -4,13 +4,13 @@ let lastScroll = 0;
 
 window.addEventListener('scroll', () => {
     const currentScroll = window.pageYOffset;
-    
+
     if (currentScroll > 50) {
         navbar.classList.add('scrolled');
     } else {
         navbar.classList.remove('scrolled');
     }
-    
+
     lastScroll = currentScroll;
 });
 
@@ -101,21 +101,21 @@ function handleSlackAuth() {
     // const redirectUri = encodeURIComponent('YOUR_REDIRECT_URI');
     // const slackAuthUrl = `https://slack.com/oauth/v2/authorize?client_id=${slackClientId}&scope=identity.basic,identity.email&redirect_uri=${redirectUri}`;
     // window.location.href = slackAuthUrl;
-    
+
     // For demo purposes, simulate authentication
     console.log('Slack authentication initiated...');
-    
+
     // Simulate loading
     const btn = event.target;
     const originalText = btn.innerHTML;
     btn.innerHTML = '<span style="font-size: 1.5rem;">⏳</span> Connecting...';
     btn.disabled = true;
-    
+
     setTimeout(() => {
         // Store auth state
         localStorage.setItem('slackAuth', 'true');
         localStorage.setItem('userName', 'Demo User');
-        
+
         // Redirect to dashboard
         window.location.href = 'dashboard.html';
     }, 1500);
@@ -162,3 +162,45 @@ function animateValue(element, start, end, duration) {
 // Console welcome message
 console.log('%c🚀 Welcome to UltaHost!', 'font-size: 20px; font-weight: bold; color: #6366f1;');
 console.log('%cBuilt with modern web technologies', 'font-size: 12px; color: #8b5cf6;');
+
+// Booking interface functions
+function selectTimeSlot(element, timeString) {
+    // Remove selected class from all slots
+    document.querySelectorAll('.time-slot').forEach(slot => {
+        slot.classList.remove('selected');
+    });
+
+    // Add selected class to clicked slot
+    element.classList.add('selected');
+
+    // Show booking form
+    const bookingForm = document.getElementById('bookingForm');
+    const selectedTime = document.getElementById('selectedTime');
+
+    selectedTime.textContent = `Selected: ${timeString}`;
+    bookingForm.style.display = 'block';
+
+    // Smooth scroll to form
+    bookingForm.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+
+function confirmBooking() {
+    const inputs = document.querySelectorAll('.booking-input');
+    const name = inputs[0].value;
+    const email = inputs[1].value;
+
+    if (!name || !email) {
+        alert('Please fill in your name and email to confirm the booking.');
+        return;
+    }
+
+    // In production, this would send data to your backend
+    alert(`🎉 Booking confirmed!\n\nWe'll send a confirmation email to ${email} with the meeting link.`);
+
+    // Reset form
+    inputs.forEach(input => input.value = '');
+    document.getElementById('bookingForm').style.display = 'none';
+    document.querySelectorAll('.time-slot').forEach(slot => {
+        slot.classList.remove('selected');
+    });
+}
