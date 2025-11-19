@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - UltaHost</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">UltaHost</div>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="#" class="nav-item active">
+                    <span class="nav-icon">📊</span>
+                    <span>Overview</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">🌐</span>
+                    <span>Hosting</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">🔗</span>
+                    <span>Domains</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">📧</span>
+                    <span>Email</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">📈</span>
+                    <span>Analytics</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">⚙️</span>
+                    <span>Settings</span>
+                </a>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="user-profile">
+                    <div class="user-avatar">👤</div>
+                    <div class="user-info">
+                        <div class="user-name" id="userName">Demo User</div>
+                        <div class="user-email">demo@ultahost.com</div>
+                    </div>
+                </div>
+                <button class="btn btn-secondary" onclick="logout()"
+                    style="width: 100%; margin-top: 1rem;">Logout</button>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="dashboard-main">
+            <header class="dashboard-header">
+                <div>
+                    <h1>Welcome back! 👋</h1>
+                    <p style="color: var(--text-secondary);">Here's what's happening with your services</p>
+                </div>
+                <button class="btn btn-primary">+ New Service</button>
+            </header>
+
+            <!-- Stats Grid -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">🌐</div>
+                    <div class="stat-content">
+                        <div class="stat-label">Active Websites</div>
+                        <div class="stat-value">12</div>
+                        <div class="stat-change positive">+2 this month</div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🔗</div>
+                    <div class="stat-content">
+                        <div class="stat-label">Domains</div>
+                        <div class="stat-value">8</div>
+                        <div class="stat-change">3 expiring soon</div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">📊</div>
+                    <div class="stat-content">
+                        <div class="stat-label">Total Visitors</div>
+                        <div class="stat-value">45.2K</div>
+                        <div class="stat-change positive">+12.5% vs last month</div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">⚡</div>
+                    <div class="stat-content">
+                        <div class="stat-label">Uptime</div>
+                        <div class="stat-value">99.9%</div>
+                        <div class="stat-change positive">All systems operational</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Services Section -->
+            <section class="dashboard-section">
+                <div class="section-header">
+                    <h2>Your Hosting Services</h2>
+                    <a href="#" class="btn btn-secondary">View All</a>
+                </div>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-header">
+                            <div>
+                                <h3>mywebsite.com</h3>
+                                <p class="service-type">Shared Hosting</p>
+                            </div>
+                            <span class="status-badge active">Active</span>
+                        </div>
+                        <div class="service-stats">
+                            <div class="service-stat">
+                                <span class="stat-label">Storage</span>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 45%"></div>
+                                </div>
+                                <span class="stat-value">4.5 GB / 10 GB</span>
+                            </div>
+                            <div class="service-stat">
+                                <span class="stat-label">Bandwidth</span>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 32%"></div>
+                                </div>
+                                <span class="stat-value">32 GB / 100 GB</span>
+                            </div>
+                        </div>
+                        <div class="service-actions">
+                            <button class="btn btn-secondary">Manage</button>
+                            <button class="btn btn-secondary">Analytics</button>
+                        </div>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-header">
+                            <div>
+                                <h3>shop.example.com</h3>
+                                <p class="service-type">VPS Hosting</p>
+                            </div>
+                            <span class="status-badge active">Active</span>
+                        </div>
+                        <div class="service-stats">
+                            <div class="service-stat">
+                                <span class="stat-label">CPU Usage</span>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 28%"></div>
+                                </div>
+                                <span class="stat-value">28%</span>
+                            </div>
+                            <div class="service-stat">
+                                <span class="stat-label">Memory</span>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 56%"></div>
+                                </div>
+                                <span class="stat-value">2.8 GB / 5 GB</span>
+                            </div>
+                        </div>
+                        <div class="service-actions">
+                            <button class="btn btn-secondary">Manage</button>
+                            <button class="btn btn-secondary">Analytics</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Domains Section -->
+            <section class="dashboard-section">
+                <div class="section-header">
+                    <h2>Your Domains</h2>
+                    <a href="#" class="btn btn-secondary">Register New</a>
+                </div>
+                <div class="table-container">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Domain</th>
+                                <th>Status</th>
+                                <th>Expiry Date</th>
+                                <th>Auto-Renew</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>mywebsite.com</strong></td>
+                                <td><span class="status-badge active">Active</span></td>
+                                <td>Dec 15, 2025</td>
+                                <td><span class="badge-success">Enabled</span></td>
+                                <td><a href="#" class="link-primary">Manage</a></td>
+                            </tr>
+                            <tr>
+                                <td><strong>example.net</strong></td>
+                                <td><span class="status-badge active">Active</span></td>
+                                <td>Jan 22, 2026</td>
+                                <td><span class="badge-success">Enabled</span></td>
+                                <td><a href="#" class="link-primary">Manage</a></td>
+                            </tr>
+                            <tr>
+                                <td><strong>shop.example.com</strong></td>
+                                <td><span class="status-badge warning">Expiring Soon</span></td>
+                                <td>Nov 30, 2024</td>
+                                <td><span class="badge-warning">Disabled</span></td>
+                                <td><a href="#" class="link-primary">Renew Now</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Quick Actions -->
+            <section class="dashboard-section">
+                <h2>Quick Actions</h2>
+                <div class="quick-actions-grid">
+                    <div class="action-card">
+                        <span class="action-icon">🚀</span>
+                        <h3>Deploy Website</h3>
+                        <p>Launch a new website in minutes</p>
+                    </div>
+                    <div class="action-card">
+                        <span class="action-icon">🔍</span>
+                        <h3>Search Domains</h3>
+                        <p>Find your perfect domain name</p>
+                    </div>
+                    <div class="action-card">
+                        <span class="action-icon">📧</span>
+                        <h3>Setup Email</h3>
+                        <p>Create professional email accounts</p>
+                    </div>
+                    <div class="action-card">
+                        <span class="action-icon">💬</span>
+                        <h3>Contact Support</h3>
+                        <p>Get help from our expert team</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        // Check authentication
+        window.addEventListener('load', () => {
+            const isAuthenticated = localStorage.getItem('slackAuth');
+            if (!isAuthenticated) {
+                window.location.href = 'index.html';
+            }
+
+            // Set user name
+            const userName = localStorage.getItem('userName');
+            if (userName) {
+                document.getElementById('userName').textContent = userName;
+            }
+        });
+
+        // Logout function
+        function logout() {
+            localStorage.removeItem('slackAuth');
+            localStorage.removeItem('userName');
+            window.location.href = 'index.html';
+        }
+
+        // Sidebar navigation
+        document.querySelectorAll('.nav-item').forEach(item => {
+            item.addEventListener('click', (e) => {
+                e.preventDefault();
+                document.querySelectorAll('.nav-item').forEach(i => i.classList.remove('active'));
+                item.classList.add('active');
+            });
+        });
+    </script>
+</body>
+
+</html>
